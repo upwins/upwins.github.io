@@ -7,9 +7,17 @@ website:
     left:
       - href: index.ipynb
         text: Home
+      - href: reports.ipynb
+        text: Reports
       - href: about.ipynb
         text: About
-
+  sidebar:
+    - title: Reports
+      style: docked
+      contents:
+        - reports.ipynb
+        - reports/reportA.ipynb
+    
 format:
   html:
     theme: cosmo
