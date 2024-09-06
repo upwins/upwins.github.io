@@ -16,7 +16,7 @@ website:
       style: docked
       contents:
         - reports.ipynb
-        - reports/reportA.ipynb
+        - reports/SaltReport.ipynb
     
 format:
   html:
