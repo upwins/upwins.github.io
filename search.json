@@ -4,21 +4,33 @@
     "href": "reports/SaltReport.html",
     "title": "Report: Collections at Allied between 6/28-9/3",
     "section": "",
-    "text": "Min wavelength: 350.0\nMax wavelength: 2500.0\nNumber of Spectra: 1020\nNumber of Bands: 2151\n\n\n\n\n\n\n\n\nFigure 1: Number of Occurrences of Each Species\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Number of Occurrences of Each Species-Metadata Combination"
+    "text": "Min wavelength: 350.0\nMax wavelength: 2500.0\nNumber of Spectra: 1020\nNumber of Bands: 2151\n\n\n\n\n\n\n\n\nFigure 1: Number of Occurrences of Each Species\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Number of Occurrences of Each Species-Metadata Combination",
+    "crumbs": [
+      "Reports",
+      "Report: Collections at Allied between 6/28-9/3"
+    ]
   },
   {
     "objectID": "reports/SaltReport.html#totals",
     "href": "reports/SaltReport.html#totals",
     "title": "Report: Collections at Allied between 6/28-9/3",
     "section": "",
-    "text": "Min wavelength: 350.0\nMax wavelength: 2500.0\nNumber of Spectra: 1020\nNumber of Bands: 2151\n\n\n\n\n\n\n\n\nFigure 1: Number of Occurrences of Each Species\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Number of Occurrences of Each Species-Metadata Combination"
+    "text": "Min wavelength: 350.0\nMax wavelength: 2500.0\nNumber of Spectra: 1020\nNumber of Bands: 2151\n\n\n\n\n\n\n\n\nFigure 1: Number of Occurrences of Each Species\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Number of Occurrences of Each Species-Metadata Combination",
+    "crumbs": [
+      "Reports",
+      "Report: Collections at Allied between 6/28-9/3"
+    ]
   },
   {
     "objectID": "reports/SaltReport.html#species-comparisons-for-salt-water-inundation-testing",
     "href": "reports/SaltReport.html#species-comparisons-for-salt-water-inundation-testing",
     "title": "Report: Collections at Allied between 6/28-9/3",
     "section": "Species Comparisons for Salt Water Inundation Testing",
-    "text": "Species Comparisons for Salt Water Inundation Testing\nBelow are means of spectra collected for species at specified dates and times (format: date_hour).\nNote:\nChlorophyll a: Absorption peaks at 430nm (blue) and 662nm (red).\nChlorophyll b: Absorption peaks at 453nm (blue) and 642nm (red).\n(Reference)"
+    "text": "Species Comparisons for Salt Water Inundation Testing\nBelow are means of spectra collected for species at specified dates and times (format: date_hour).\nNote:\nChlorophyll a: Absorption peaks at 430nm (blue) and 662nm (red).\nChlorophyll b: Absorption peaks at 453nm (blue) and 642nm (red).\n(Reference)",
+    "crumbs": [
+      "Reports",
+      "Report: Collections at Allied between 6/28-9/3"
+    ]
   },
   {
     "objectID": "about.html",
