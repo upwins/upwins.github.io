@@ -1,4 +1,4 @@
-FROM nvcr.io/nvidia/pytorch:24.08-py3
+FROM mcr.microsoft.com/devcontainers/python:1-3.12-bullseye
 
 COPY requirements.txt .
 RUN apt-get update \

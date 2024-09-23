@@ -5,3 +5,5 @@ plotly
 quarto-cli
 spectral
 specdal
+python-dotenv
+pymongo
