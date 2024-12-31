@@ -2,3 +2,4 @@
 _site
 _environment
 .env
+report_data/

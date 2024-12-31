@@ -1,3 +1,4 @@
 /.quarto/
 _environment
 .env
+report_data/

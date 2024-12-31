@@ -16,7 +16,7 @@ website:
       style: floating
       contents:
         - reports.ipynb
-        - reports/SaltReport.ipynb
+        - reports/Report1.ipynb
     
 format:
   html:
