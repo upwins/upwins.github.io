@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://upwins.github.io/about.html</loc>
+    <lastmod>2025-01-10T16:03:41.732Z</lastmod>
+  </url>
+  <url>
     <loc>https://upwins.github.io/reports.html</loc>
-    <lastmod>2024-09-03T22:56:27.844Z</lastmod>
+    <lastmod>2025-01-10T16:03:41.732Z</lastmod>
   </url>
   <url>
     <loc>https://upwins.github.io/reports/Report1.html</loc>
-    <lastmod>2024-12-16T16:49:41.210Z</lastmod>
-  </url>
-  <url>
-    <loc>https://upwins.github.io/about.html</loc>
-    <lastmod>2024-08-30T16:51:21.161Z</lastmod>
+    <lastmod>2025-01-24T16:20:42.741Z</lastmod>
   </url>
   <url>
     <loc>https://upwins.github.io/index.html</loc>
-    <lastmod>2024-09-06T02:46:34.467Z</lastmod>
+    <lastmod>2025-01-10T16:03:41.732Z</lastmod>
   </url>
 </urlset>
