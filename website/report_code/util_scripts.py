@@ -48,8 +48,10 @@ class SpectralCollection():
         self.spectra = np.array([list(spectrum.values()) for spectrum in df['spectrum']])
 
         # remove spectra with large derivate, which are the spectra collected using sunlight
-        derivitive = np.mean(np.abs(self.spectra[:,1:]-self.spectra[:,:-1]), axis=1)
-        select_indices = np.where(derivitive<0.0025)[0]
+        #derivitive = np.mean(np.abs(self.spectra[:,1:]-self.spectra[:,:-1]), axis=1)
+        #select_indices = np.where(derivitive<0.0025)[0]
+        select_indices = np.arange(len(self.spectra))
+
         # create variables for the library data 
         self.names = self.names[select_indices]
         self.fnames = self.fnames[select_indices]
@@ -141,7 +143,7 @@ class SpectralCollection():
             'full_name': (self.names, []),
             'genus': (self.genus, []),
             'species': (self.species, []),
-            'age': (self.age, ['PE', '1G', '2G', 'J', 'M', 'D', 'N']),
+            'age': (self.age, ['PE', 'RE', '1G', '2G', 'J', 'M', 'D', 'N']),
             'health': (self.health, []),
             'part': (self.principle_part, ['MX', 'L', 'ST', 'SP', 'LG', 'FL', 'FR', 'SE']),
             'type': (self.plant_type, []),
@@ -255,13 +257,16 @@ class SpectralCollection():
         count_totals = []
 
         for val in vals:
-            indices = np.where(self.code_dict[list_by][0]==val)[0]
+            selected_indices = np.arange(len(self.code_dict[list_by][0]))
+            #selected_indices = np.where(self.code_dict[list_by][0]==val)[0]
+            selected_indices = selected_indices[self.code_dict[list_by][0][selected_indices]==val]
+
             full_dict_of_counts = {}
             for code in codes:
                 code_vals = np.unique(self.code_dict[code][0]).tolist()
 
                 dict_of_counts = dict(zip(code_vals, [0] * len(code_vals)))
-                counts = Counter(self.code_dict[code][0][indices])
+                counts = Counter(self.code_dict[code][0][selected_indices])
                 
                 for k, v in counts.items():
                     dict_of_counts[str(k)] = v
@@ -269,10 +274,11 @@ class SpectralCollection():
                 full_dict_of_counts.update(dict_of_counts)
 
             count_totals.append(full_dict_of_counts)
-            vals_totals.append(len(indices))
+            vals_totals.append(len(selected_indices))
 
 
         df = pd.DataFrame(count_totals, index=vals)
+        df.drop('N', axis=1, inplace=True)
         df.insert(0, "Total", vals_totals)
         # create a title for the df using
         #df.style.set_caption("")
@@ -322,6 +328,14 @@ class SpectralCollection():
         plt.title(f'{name_full_cat} ({len(selected_indices)} Spectra)')
         plt.legend(bbox_to_anchor=(0.0, -0.05), loc='upper left', ncols=3)
     
+    def select_indicies_with_filter(self, filter):
+        selected_indices = np.arange(len(self.name))
+
+        for k,v in filter.items():
+            selected_indices = selected_indices[self.code_dict[k][0][selected_indices]==v]
+
+        return selected_indices
+
     def plot_with_filter(self, filter, plotby, colormap='gray'):
         selected_indices = np.arange(len(self.name))
         title = ""
