@@ -66,7 +66,7 @@ class SpectralCollection():
         self.principle_part = []
         self.health = []
         self.age = []
-        self.bloom = []
+        self.lifecycle = []
         self.DateTimeId = []
         self.DateTimeKeys = []
         self.month = []
@@ -94,7 +94,7 @@ class SpectralCollection():
                     self.principle_part.append(row['principal_part'].values[0])
                     self.health.append(row['health'].values[0])
                     self.age.append(row['age'].values[0])
-                    self.bloom.append(row['bloom'].values[0])
+                    self.lifecycle.append(row['lifecycle'].values[0])
                     self.name_genus_species.append(row['genus'].values[0]+'_'+row['species'].values[0])
                     self.DateTimeId.append(row['DateTimeUniqueIdentifier'].values[0])
                     self.month.append(row['DateTimeUniqueIdentifier'].values[0][4:6])
@@ -127,7 +127,7 @@ class SpectralCollection():
         self.principle_part = np.asarray(self.principle_part)
         self.health = np.asarray(self.health)
         self.age = np.asarray(self.age)
-        self.bloom = np.asarray(self.bloom)
+        self.lifecycle = np.asarray(self.lifecycle)
         self.DateTimeId = np.asarray(self.DateTimeId)
         self.DateTimeKeys = np.asarray(self.DateTimeKeys)
         self.month = np.asarray(self.month)
@@ -143,11 +143,11 @@ class SpectralCollection():
             'full_name': (self.names, []),
             'genus': (self.genus, []),
             'species': (self.species, []),
-            'age': (self.age, ['PE', 'RE', '1G', '2G', 'J', 'M', 'D', 'N']),
+            'age': (self.age, ['PE', '1G', '2G', 'J', 'M', 'N']),
             'health': (self.health, []),
             'part': (self.principle_part, ['MX', 'L', 'ST', 'SP', 'LG', 'FL', 'FR', 'SE']),
             'type': (self.plant_type, []),
-            'bloom': (self.bloom, []),
+            'lifecycle': (self.lifecycle, ['D', 'RE', 'FLG', 'FFG', 'FRG', 'N']),
             'date': (self.DateTimeKeys, [])
         }
 
