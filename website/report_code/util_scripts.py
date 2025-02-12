@@ -271,7 +271,13 @@ class SpectralCollection():
                 for k, v in counts.items():
                     dict_of_counts[str(k)] = v
                 
-                full_dict_of_counts.update(dict_of_counts)
+                sorted_dict_of_counts = {key: dict_of_counts[key] for key in self.code_dict[code][1] if key in dict_of_counts}
+                
+                if not sorted_dict_of_counts:
+                    sorted_dict_of_counts = dict_of_counts
+                   
+
+                full_dict_of_counts.update(sorted_dict_of_counts)
 
             count_totals.append(full_dict_of_counts)
             vals_totals.append(len(selected_indices))
